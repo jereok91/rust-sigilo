@@ -8,5 +8,5 @@ fn main() {
         std::env::set_var("WEBKIT_DISABLE_DMABUF_RENDERER", "1");
     }
 
-    basic_decrip_lib::run()
+    rust_sigilo_lib::run()
 }

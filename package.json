@@ -1,7 +1,8 @@
 {
-  "name": "basic_decrip",
+  "name": "rust-sigilo",
   "private": true,
   "version": "0.1.0",
+  "description": "Aplicación de escritorio para cifrar y descifrar texto con AES-256 (GCM/CBC) usando un secreto de 32 bytes en Base64",
   "scripts": {
     "tauri": "tauri",
     "dev": "tauri dev",

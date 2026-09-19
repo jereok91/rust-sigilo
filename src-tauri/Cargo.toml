@@ -1,10 +1,11 @@
 [package]
-name = "basic_decrip"
+name = "rust-sigilo"
 version = "0.1.0"
+description = "Aplicación de escritorio para cifrar y descifrar texto con AES-256 (GCM/CBC) usando un secreto de 32 bytes en Base64"
 edition = "2021"
 
 [lib]
-name = "basic_decrip_lib"
+name = "rust_sigilo_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
