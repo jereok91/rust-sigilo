@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>basic_decrip AES-256</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-mode="decrypt" class="tab active">Descifrar</button>
+      <button type="button" role="tab" data-mode="encrypt" class="tab">Cifrar</button>
+    </div>
+
+    <label for="key">Secreto (clave Base64, 32 bytes)</label>
+    <div class="row">
+      <input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="openssl rand -base64 32" />
+      <button id="toggle" type="button" class="ghost">Ver</button>
+    </div>
+
+    <label for="input" id="input-label">Texto cifrado</label>
+    <textarea id="input" rows="5" spellcheck="false" placeholder="Base64, hex o iv:tag:ciphertext"></textarea>
+
+    <div id="format-row" class="format" hidden>
+      <label for="format">Formato de salida</label>
+      <select id="format">
+        <option value="gcm-b64">AES-256-GCM · Base64(nonce ‖ cifrado ‖ tag)</option>
+        <option value="gcm-hex">AES-256-GCM · hex iv:tag:cifrado</option>
+        <option value="cbc-b64">AES-256-CBC · Base64(iv ‖ cifrado)</option>
+      </select>
+    </div>
+
+    <button id="go" type="button">Descifrar</button>
+
+    <label for="output" id="output-label">Texto en claro</label>
+    <textarea id="output" rows="4" readonly></textarea>
+    <div class="row between">
+      <span id="status"></span>
+      <button id="copy" type="button" class="ghost" disabled>Copiar</button>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
