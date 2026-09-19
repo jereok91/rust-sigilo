@@ -123,6 +123,15 @@ pnpm run build        # genera paquetes .deb / .rpm / AppImage en src-tauri/targ
 npx tauri build --no-bundle   # solo el ejecutable: src-tauri/target/release/RustSigilo
 ```
 
+## Icono
+
+El icono original es `doc/iconApp.svg`. Si lo modificas, vuelve a generar
+todos los tamaños (PNG, `.ico` para Windows, `.icns` para macOS, Android e iOS) con:
+
+```bash
+npx tauri icon doc/iconApp.svg -o src-tauri/icons
+```
+
 ## Pruebas
 
 ```bash

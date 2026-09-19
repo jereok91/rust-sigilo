@@ -26,6 +26,6 @@
     "targets": "all",
     "shortDescription": "Cifrar y descifrar texto con AES-256",
     "longDescription": "Aplicación de escritorio para cifrar y descifrar texto con AES-256 (GCM/CBC) usando un secreto de 32 bytes en Base64.",
-    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.png"]
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.png", "icons/icon.icns", "icons/icon.ico"]
   }
 }

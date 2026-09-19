@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgHex" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13151b"/>
+      <stop offset="100%" stop-color="#0a0b0e"/>
+    </linearGradient>
+    <linearGradient id="prismLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="prismRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Canvas -->
+  <rect x="32" y="32" width="448" height="448" rx="108" fill="url(#bgHex)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <!-- Concept: The Dual State Switch & Sigil (Bi-direccional / Toggle State) -->
+  <!-- Represents: Tab switching (Cifrar / Descifrar), Dual Mode (GCM/CBC), and Hidden Key slit -->
+  <g id="dual-sigil" transform="translate(256, 256)">
+    <!-- Left Pillar (Cifrado / Input Plain) -->
+    <path d="M -70 -100 C -40 -100, -20 -80, -20 -50 L -20 50 C -20 80, -40 100, -70 100 C -100 100, -120 80, -120 50 L -120 -50 C -120 -80, -100 -100, -70 -100 Z"
+          fill="url(#prismLeft)"/>
+    
+    <!-- Right Pillar (Descifrado / Output Cipher) with geometric shift forming an S-alignment -->
+    <path d="M 70 -50 C 40 -50, 20 -30, 20 0 L 20 100 C 20 130, 40 150, 70 150 C 100 150, 120 130, 120 100 L 120 0 C 120 -30, 100 -50, 70 -50 Z"
+          fill="url(#prismRight)"/>
+
+    <!-- Central S bridge linking both states: the transformation pipeline -->
+    <path d="M -70 -50 Q 0 -50 0 0 Q 0 50 70 50" 
+          fill="none" 
+          stroke="#f8fafc" 
+          stroke-width="26" 
+          stroke-linecap="round"/>
+
+    <!-- The Secret Key Eye / Vault Pip (Hidden by default / Reveal indicator) -->
+    <circle cx="0" cy="0" r="8" fill="#f97316"/>
+  </g>
+</svg>
